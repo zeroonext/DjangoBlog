@@ -64,6 +64,15 @@
                 <a class="btn btn-lg btn-primary" href="#" role="button"> Register</a>
                 <a class="btn btn-lg btn-success" href="#" role="button"> Log in</a>
         </div>
+        <div>
+            {% for post in posts %}
+                <div>
+                    <h6>published: {{ post.published_date }}</h6>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </main><!-- /.container -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
